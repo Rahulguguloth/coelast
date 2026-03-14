@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -22,3 +23,54 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+=======
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ML Models
+models/*.pkl
+models/*.joblib
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Node
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data
+data/*.csv
+data/*.json
+>>>>>>> f20e6d9b748d9303b58437d9facdda3133f35d48

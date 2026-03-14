@@ -30,7 +30,7 @@ import {
   Line
 } from 'recharts';
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "http://localhost:8000";
 
 const COLORS = ['#ef4444', '#10b981', '#f59e0b', '#3b82f6'];
 
@@ -258,7 +258,7 @@ function App() {
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie
-                      data={stats?.fraud_distribution || []}
+                      data={stats?.fraud_distribution}
                       cx="50%"
                       cy="50%"
                       innerRadius={60}
@@ -266,7 +266,7 @@ function App() {
                       paddingAngle={5}
                       dataKey="value"
                     >
-                      {(stats?.fraud_distribution || []).map((entry, index) => (
+                      {stats?.fraud_distribution.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                       ))}
                     </Pie>
@@ -288,7 +288,7 @@ function App() {
               <div className="h-[250px] w-full">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart
-                    data={stats?.top_providers || []}
+                    data={stats?.top_providers}
                     layout="vertical"
                     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                   >
